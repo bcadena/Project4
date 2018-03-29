@@ -1,0 +1,62 @@
+#md5 test
+
+import hashlib
+
+def md5Checksum(filePath):
+    with open(filePath, 'rb') as fh:
+        m = hashlib.md5()
+        while True:
+            data = fh.read(8192)
+            if not data:
+                break
+            m.update(data)
+        return m.hexdigest()
+
+print('The MD5 checksum of file is', md5Checksum('filename'))
+
+
+
+#factorial with test
+
+
+import unittest
+from math import factorial as fact
+class TestFactorial(unittest.TestCase):
+    def test_fact(self):
+        res = fact(5)
+        self.assertEqual(res, 120)
+        res = fact()
+        self.assertEqual(res, )
+
+if __name__ == '__main__':
+    unittest.main()
+
+
+
+#fibonacci  (from fibonacci import fib)
+
+import doctest
+
+def fib(n):
+    a, b = 0, 1
+    for i in range(n):
+        a, b = b, a + b
+    return a
+
+import unittest
+class FibonacciTest(unittest.TestCase):
+    def testCalculation(self):
+        self.assertEqual(fib(0), 0)
+        self.assertEqual(fib(1), 1)
+        self.assertEqual(fib(5), 5)
+        self.assertEqual(fib(10), 55)
+        self.assertEqual(fib(20), 6765)
+
+if __name__ == "__main__": 
+    unittest.main()
+
+
+
+#is-prime
+
+#slack-alert
