@@ -18,7 +18,6 @@ print('The MD5 checksum of file is', md5Checksum('filename'))
 
 #factorial with test
 
-
 import unittest
 from math import factorial as fact
 class TestFactorial(unittest.TestCase):
@@ -54,7 +53,6 @@ class FibonacciTest(unittest.TestCase):
 
 if __name__ == "__main__": 
     unittest.main()
-
 
 
 #is-prime
